@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class OlxLoginApplication {
+public class OlxLoginApp {
 
 	public static void main(String[] args) {
-		SpringApplication.run(OlxLoginApplication.class, args);
+		SpringApplication.run(OlxLoginApp.class, args);
 	}
 
 }

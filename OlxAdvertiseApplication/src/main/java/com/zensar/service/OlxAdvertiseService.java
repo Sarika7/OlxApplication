@@ -1,12 +1,15 @@
 package com.zensar.service;
 
+
 import java.util.List;
+
 
 import com.zensar.entity.Advertise;
 import com.zensar.entity.AdvertiseDetails;
 
 public interface OlxAdvertiseService {
- Advertise addAdvertise( Advertise advertise,String username,  String password);
+	
+	 Advertise addAdvertise( Advertise advertise,String username,  String password);
 	 
 	 Advertise getAdvertise( long postId, String username, String password);
      
@@ -21,5 +24,4 @@ public interface OlxAdvertiseService {
 	 List<Advertise> searchAdvertise();
 	 
 	 List<AdvertiseDetails> advertiseDetails( long id, String username, String password);
-
 }

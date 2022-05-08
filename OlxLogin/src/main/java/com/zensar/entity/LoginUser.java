@@ -1,4 +1,7 @@
 package com.zensar.entity;
+
+
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -8,18 +11,22 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
-
-
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-//@ApiModel("This is the Olx Master model")
+//@ApiModel("This is the OlxLogin model")
 @Entity
-public class AdvertiseStatus {
-	//@ApiModelProperty("User Id of integer type")
+public class LoginUser {
+	
+	//@ApiModelProperty("UserId of integer type")
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-      private long id;
-      private String status;
+	private long id;
+	private String firstName;
+	private String lastName;
+	private String userName;
+	private String password;
+	private String email;
+	private long phone;
+
 }

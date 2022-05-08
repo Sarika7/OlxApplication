@@ -1,5 +1,6 @@
 package com.zensar.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,20 +12,22 @@ import org.springframework.web.bind.annotation.RestController;
 import com.zensar.entity.AdvertiseCategory;
 import com.zensar.entity.AdvertiseStatus;
 import com.zensar.service.OlxMasterService;
-import com.zensar.service.OlxMasterServiceImpl;
+
+
 
 @RestController
-@RequestMapping(value="/advertise",produces= {MediaType.APPLICATION_XML_VALUE,MediaType.APPLICATION_JSON_VALUE}, consumes= { MediaType.APPLICATION_XML_VALUE,MediaType.APPLICATION_JSON_VALUE})
+@RequestMapping(value="/advertise")
 public class MyController {
+	
 	@Autowired
 	private OlxMasterService olxmasterService;
 	
-	@GetMapping("/category")
+	@GetMapping(value="/category",produces= {MediaType.APPLICATION_XML_VALUE,MediaType.APPLICATION_JSON_VALUE})
 	public List<AdvertiseCategory> getAllAdvertisementCategories() {
-		return OlxMasterService.getAllAdvertisementCategories();
+		return olxmasterService.getAllAdvertisementCategories();
 	}
 	
-	@GetMapping("/status")
+	@GetMapping(value="/status",produces= {MediaType.APPLICATION_XML_VALUE,MediaType.APPLICATION_JSON_VALUE})
 	public List<AdvertiseStatus> getAllAdvertisementStatus(){
 		return olxmasterService.getAllAdvertisementStatus();
 	}
